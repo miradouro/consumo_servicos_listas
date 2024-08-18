@@ -8,6 +8,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  List _itens = [];
+
+  void _carregarItens(){
+
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +29,10 @@ class _HomeState extends State<Home> {
           itemCount: 5,
           itemBuilder: (context, indice){
             print("item ${indice}");
+            return ListTile(
+              title: Text( indice.toString()),
+              subtitle: const Text("subtitulo"),
+            );
           },
         ),
       ),
